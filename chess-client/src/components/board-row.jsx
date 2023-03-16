@@ -1,34 +1,34 @@
 import React from 'react';
-import '../index.css';
+
 
 class Square extends React.Component {
   render() {
     return (
       <button className="square">
-        
+        {this.props.value}
       </button>
     );
   }
 }
 
 class Board2 extends React.Component {
+  
   renderSquare(i) {
-    return <Square />;
+    return <Square value = {i + this.props.value}/>;
   }
 
   render() {
     
     return (
       <div className='BoardRow'>
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-
+          {this.renderSquare('a')}
+          {this.renderSquare('b')}
+          {this.renderSquare('c')}
+          {this.renderSquare('d')}
+          {this.renderSquare('e')}
+          {this.renderSquare('f')}
+          {this.renderSquare('g')}
+          {this.renderSquare('h')}
       </div>
     );
   }

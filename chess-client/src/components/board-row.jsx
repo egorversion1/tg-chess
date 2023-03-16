@@ -1,8 +1,25 @@
 import React from 'react';
+import '../index.css';
 
-const BoardRow = () => {
+class Square extends React.Component {
+  render() {
     return (
-        <div className="board-row">
+      <button className="square">
+        
+      </button>
+    );
+  }
+}
+
+class Board2 extends React.Component {
+  renderSquare(i) {
+    return <Square />;
+  }
+
+  render() {
+    
+    return (
+      <div className='BoardRow'>
           {this.renderSquare(0)}
           {this.renderSquare(1)}
           {this.renderSquare(2)}
@@ -11,8 +28,10 @@ const BoardRow = () => {
           {this.renderSquare(5)}
           {this.renderSquare(6)}
           {this.renderSquare(7)}
-        </div>
-    );
-};
 
-export default BoardRow;
+      </div>
+    );
+  }
+}
+
+export default Board2

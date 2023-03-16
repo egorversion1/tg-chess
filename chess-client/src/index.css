@@ -14,7 +14,7 @@
     width: 34px;
   }
 
-  .board-row:after {
+  .BoardRow:after {
     clear: both;
     content: "";
     display: table;

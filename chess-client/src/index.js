@@ -1,31 +1,26 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import BoardRow from './components/board-row';
+import Board2 from './components/board-row';
 import './index.css';
 import Sketch from './sketch.js';
 
-class Square extends React.Component {
-  render() {
-    return (
-      <button className="square">
-        
-      </button>
-    );
-  }
-}
 
 class Board extends React.Component {
-  renderSquare(i) {
-    return <Square />;
-  }
+
 
   render() {
     
     return (
       <div>
-        <BoardRow />
-        <BoardRow />
-        <BoardRow />
+        <Board2 />
+        <Board2 />
+        <Board2 />
+        <Board2 />
+        <Board2 />
+        <Board2 />
+        <Board2 />
+        <Board2 />
+
       </div>
     );
   }

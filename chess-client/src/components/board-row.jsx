@@ -3,7 +3,7 @@ import React from 'react';
 
 class Square extends React.Component {
   render() {
-    if(this.props.value == "a1" || this.props.value == "b2"){//this.props.value % 2 == 0
+    if(this.props.id % 2 === 0){
       return (
         <button className="square"  style={{background: "black", color: "white"}}>
           {this.props.value}
@@ -17,14 +17,13 @@ class Square extends React.Component {
         </button>
       );
     }
-
   }
 }
 
 class Board2 extends React.Component {
   
   renderSquare(i) {
-    return <Square value = {i + this.props.value}/>;
+    return <Square value = {i + this.props.obj.value} id ={this.props.obj.id}/>;
   }
 
   render() {

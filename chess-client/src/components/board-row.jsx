@@ -3,11 +3,21 @@ import React from 'react';
 
 class Square extends React.Component {
   render() {
-    return (
-      <button className="square">
-        {this.props.value}
-      </button>
-    );
+    if(this.props.value == "a1" || this.props.value == "b2"){//this.props.value % 2 == 0
+      return (
+        <button className="square"  style={{background: "black", color: "white"}}>
+          {this.props.value}
+        </button>
+      );
+    }
+    else{
+      return (
+        <button className="square"  style={{background: "white", color: "black"}}>
+          {this.props.value}
+        </button>
+      );
+    }
+
   }
 }
 
